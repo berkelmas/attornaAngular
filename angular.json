@@ -24,6 +24,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "plugins/goodlayers-core/plugins/combine/style.css",
+              "plugins/goodlayers-core/include/css/page-builder.css",
+              "css/style-core.css",
+              "css/attorna-style-custom.css",
               "src/styles.css"
             ],
             "scripts": []
