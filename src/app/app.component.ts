@@ -1,7 +1,6 @@
-import { Component, HostListener, ViewChild, ElementRef, Renderer2, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {
   trigger,
-  state,
   style,
   animate,
   transition
@@ -10,7 +9,7 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   animations: [
     trigger('menuChanged', [
       transition('void => entered', [style({transform: 'translateY(-100px)', opacity: 0}), animate('500ms')])
@@ -40,7 +39,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  constructor(private renderer: Renderer2) {};
+  constructor() {};
 
   openMenu() {
     this.displaySidebar = !this.displaySidebar;
