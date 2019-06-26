@@ -139,57 +139,49 @@
                                         <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core-active">
                                             <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                             <div class=gdlr-core-accordion-item-content-wrapper>
-                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What do you get for your attorney’s fee?</h4>
-                                                <div class=gdlr-core-accordion-item-content>
+                                                <h4 (click)="openQuestion(1)" class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What do you get for your attorney’s fee?</h4>
+                                                <div *ngIf="firstQuestion" class="gdlr-core-accordion-item-content" #firstAnswer>
                                                     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                        <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core-active">
                                             <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                             <div class=gdlr-core-accordion-item-content-wrapper>
-                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">How long is the statute of limitations to file suit for a New York personal injury case?</h4>
-                                                <div class=gdlr-core-accordion-item-content>
+                                                <h4 (click)="openQuestion(2)" class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What do you get for your attorney’s fee?</h4>
+                                                <div *ngIf="secondQuestion" class="gdlr-core-accordion-item-content" #secondAnswer>
                                                     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                        <div class="gdlr-core-accordion-item-tab clearfix gdlr-core-active">
                                             <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                             <div class=gdlr-core-accordion-item-content-wrapper>
-                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What information do you need from me in order to get started?</h4>
-                                                <div class=gdlr-core-accordion-item-content>
+                                                <h4 (click)="openQuestion(3)"class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What information do you need from me in order to get started?</h4>
+                                                <div *ngIf="thirdQuestion" class="gdlr-core-accordion-item-content" #thirdAnswer>
                                                     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                        <div class="gdlr-core-accordion-item-tab clearfix gdlr-core-active">
                                             <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                             <div class=gdlr-core-accordion-item-content-wrapper>
-                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What types of injury cases does your firm work on?</h4>
-                                                <div class=gdlr-core-accordion-item-content>
+                                                <h4 (click)="openQuestion(4)" class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What types of injury cases does your firm work on?</h4>
+                                                <div *ngIf="fourthQuestion" class="gdlr-core-accordion-item-content" #fourthAnswer>
                                                     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="gdlr-core-accordion-item-tab clearfix ">
+                                        <div class="gdlr-core-accordion-item-tab clearfix gdlr-core-active">
                                             <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                             <div class=gdlr-core-accordion-item-content-wrapper>
-                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What is my personal injury or insurance claim worth?</h4>
-                                                <div class=gdlr-core-accordion-item-content>
+                                                <h4 (click)="openQuestion(5)" class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What is my personal injury or insurance claim worth?</h4>
+                                                <div *ngIf="fifthQuestion" class="gdlr-core-accordion-item-content" #fifthAnswer>
                                                     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="gdlr-core-accordion-item-tab clearfix ">
-                                            <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                            <div class=gdlr-core-accordion-item-content-wrapper>
-                                                <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">On average, how long does it take before a settlement/trial is reached?</h4>
-                                                <div class=gdlr-core-accordion-item-content>
-                                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
