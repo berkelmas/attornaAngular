@@ -1,8 +1,11 @@
 
 <!-- SİDEBAR NAVİGATION -->
 
-<div style="z-index : 10" class="attorna-mm-menu-wrap attorna-navigation-font mm-menu mm-pagedim-black mm-offcanvas mm-right mm-current mm-opened" id="attorna-mobile-menu" data-slide="right"><div class="mm-panels"><div class="mm-panel mm-hasnavbar mm-opened mm-current" id="menu-main-navigation"><div class="mm-navbar"><a class="mm-title"><span class="mmenu-custom-close"></span></a></div><ul class="m-menu mm-listview">
-                            <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a class="mm-next" href="#mm-1" data-target="#mm-1"></a><a href="index.html" aria-current="page">Home</a>
+<div
+  *ngIf="displaySidebar"
+  [@siderbarChanged]="'sidebarEntered'"
+  style="z-index : 10" class="attorna-mm-menu-wrap attorna-navigation-font mm-menu mm-pagedim-black mm-offcanvas mm-right mm-current mm-opened" id="attorna-mobile-menu" data-slide="right"><div class="mm-panels"><div class="mm-panel mm-hasnavbar mm-opened mm-current" id="menu-main-navigation"><div class="mm-navbar"><a class="mm-title"><span class="mmenu-custom-close"></span></a></div><ul class="m-menu mm-listview">
+                            <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a class="mm-next"></a><a href="index.html">Home</a>
 
                             </li>
                             <li class="menu-item menu-item-has-children"><a class="mm-next mm-fullsubopen" href="#mm-2" data-target="#mm-2"></a><span class="attorna-mm-menu-blank">Pages</span>
@@ -100,9 +103,22 @@
                                         </ul></div></div></div>
 
 
-<div class="no-js attorna-mmenu-right mm-opened mm-blocking mm-background mm-right mm-pagedim-black mm-opening">
+<div
+  [ngClass]="{'custom-all-wrapper': displaySidebar}"
+  [@siderbarChanged]="displaySidebar ? 'mainPage' : 'mainPageClosed'"
+  style="position: relative;"
+  class="no-js attorna-mmenu-right mm-opened mm-blocking mm-background mm-right mm-pagedim-black mm-opening">
 
-  <div class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js attorna-body attorna-body-front attorna-full  attorna-with-sticky-navigation  attorna-blockquote-style-1 gdlr-core-link-to-lightbox">
+
+  <div
+    *ngIf="displaySidebar"
+    (click)="openMenu()"
+    [@siderbarChanged]="'backEntered'"
+    style="height: 100vh; width: 100%; background-color:rgba(0, 0, 0, 0.5); position: sticky; top: 0; z-index: 100;"></div>
+
+  <div
+    [style.marginTop]="displaySidebar ? '-100vh' : 0"
+    class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js attorna-body attorna-body-front attorna-full  attorna-with-sticky-navigation  attorna-blockquote-style-1 gdlr-core-link-to-lightbox">
     <!-- Mobile Header Normal -->
     <div class="attorna-mobile-header-wrap">
         <div
@@ -120,11 +136,13 @@
                     </div>
                 </div>
                 <div class="attorna-mobile-menu-right">
-                    <div class="attorna-main-menu-search" id="attorna-mobile-top-search"><i class="fa fa-search"></i></div>
 
-
-                    <div class="attorna-mobile-menu"><a class="attorna-mm-menu-button attorna-mobile-menu-button attorna-mobile-button-hamburger-with-border" href="#attorna-mobile-menu"><i class="fa fa-bars"></i></a>
-
+                    <div
+                      (click)="openMenu()"
+                      class="attorna-mobile-menu">
+                        <a class="attorna-mm-menu-button attorna-mobile-menu-button attorna-mobile-button-hamburger-with-border">
+                          <i class="fa fa-bars"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -146,9 +164,14 @@
             </div>
             <div class="attorna-mobile-menu-right">
 
-                <div class="attorna-mobile-menu"><a class="attorna-mm-menu-button attorna-mobile-menu-button attorna-mobile-button-hamburger-with-border" href="#attorna-mobile-menu"><i class="fa fa-bars"></i></a>
-
+                <div
+                  (click)="openMenu()"
+                  class="attorna-mobile-menu">
+                  <a class="attorna-mm-menu-button attorna-mobile-menu-button attorna-mobile-button-hamburger-with-border">
+                    <i class="fa fa-bars"></i>
+                  </a>
                 </div>
+
             </div>
         </div>
     </div>

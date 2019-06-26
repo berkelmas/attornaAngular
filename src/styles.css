@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+.custom-all-wrapper {
+  transform: translateX(-350px);
+  transition: all .5s;
+}
+
+@media only screen and (max-width: 550px){
+  .custom-all-wrapper {
+    transform : translateX(-250px);
+  }
+}
