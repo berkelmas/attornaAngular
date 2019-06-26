@@ -5,16 +5,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
+import { LawwithnumbersComponent } from './lawwithnumbers/lawwithnumbers.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
+import { AboutcounterComponent } from './aboutpage/aboutcounter/aboutcounter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SliderComponent
+    SliderComponent,
+    LawwithnumbersComponent,
+    MainpageComponent,
+    AboutpageComponent,
+    AboutcounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
