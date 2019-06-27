@@ -3,3 +3,21 @@
   box-shadow: 0 0 13px rgba(black, 0.2);
 
 }
+
+.faq-answer {
+  color: #f7f7f7;
+}
+
+.call-to-action {
+  background-image: linear-gradient(to right bottom, darken(#b1976b, 11%), white);
+  background-size: cover;
+  background-position: center;
+}
+
+.let-us-call {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: darken(#b1976b, 10%);
+}

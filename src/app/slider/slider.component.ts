@@ -3,8 +3,7 @@ import {
   trigger,
   style,
   animate,
-  transition,
-  query
+  transition
 } from '@angular/animations';
 
 @Component({

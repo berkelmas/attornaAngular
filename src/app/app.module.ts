@@ -9,6 +9,8 @@ import { LawwithnumbersComponent } from './lawwithnumbers/lawwithnumbers.compone
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { AboutcounterComponent } from './aboutpage/aboutcounter/aboutcounter.component';
+import { AvsinglepageComponent } from './avsinglepage/avsinglepage.component';
+import { PracticespageComponent } from './practicespage/practicespage.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AboutcounterComponent } from './aboutpage/aboutcounter/aboutcounter.com
     LawwithnumbersComponent,
     MainpageComponent,
     AboutpageComponent,
-    AboutcounterComponent
+    AboutcounterComponent,
+    AvsinglepageComponent,
+    PracticespageComponent
   ],
   imports: [
     BrowserModule,

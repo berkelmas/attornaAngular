@@ -1,9 +1,21 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {
+  trigger,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-aboutpage',
   templateUrl: './aboutpage.component.html',
-  styleUrls: ['./aboutpage.component.scss']
+  styleUrls: ['./aboutpage.component.scss'],
+  animations: [
+    trigger('faqStateAnimation', [
+          transition('void => openedAnswer', [style({height: '0px'}), animate('500ms')]),
+          transition('openedAnswer => void', [animate('500ms', style({height: '0px'}))])
+    ])
+  ]
 })
 export class AboutpageComponent implements OnInit {
   firstQuestion: boolean = false;

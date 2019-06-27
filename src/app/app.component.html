@@ -1,106 +1,52 @@
 
 <!-- SİDEBAR NAVİGATION -->
-
 <div
   *ngIf="displaySidebar"
   [@siderbarChanged]="'sidebarEntered'"
-  style="z-index : 10" class="attorna-mm-menu-wrap attorna-navigation-font mm-menu mm-pagedim-black mm-offcanvas mm-right mm-current mm-opened" id="attorna-mobile-menu" data-slide="right"><div class="mm-panels"><div class="mm-panel mm-hasnavbar mm-opened mm-current" id="menu-main-navigation"><div class="mm-navbar"><a class="mm-title"><span class="mmenu-custom-close"></span></a></div><ul class="m-menu mm-listview">
-                            <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a class="mm-next"></a><a href="index.html">Home</a>
+  style="z-index : 10" class="attorna-mm-menu-wrap attorna-navigation-font mm-menu mm-pagedim-black mm-offcanvas mm-right mm-current mm-opened">
+  <div class="mm-panels">
+    <div class="mm-panel mm-hasnavbar mm-opened mm-current" id="menu-main-navigation">
+      <div class="mm-navbar">
+        <a class="mm-title" style="color : #f7f7f7" (click)="openMenu()">
+          <span style="color: #f7f7f7" class="mmenu-custom-close"></span>
+        </a>
+      </div>
+      <ul class="m-menu mm-listview">
+        <li (click)="openMenu()" class="menu-item menu-item-home"><a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-menu-item">Ana Sayfa</a>
 
-                            </li>
-                            <li class="menu-item menu-item-has-children"><a class="mm-next mm-fullsubopen" href="#mm-2" data-target="#mm-2"></a><span class="attorna-mm-menu-blank">Pages</span>
+        </li>
+        <li (click)="openMenu()" class="menu-item menu-item-home"><a routerLink="hakkimizda" routerLinkActive="active-menu-item">Hakkımızda</a>
 
-                            </li>
-                            <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-3" data-target="#mm-3"></a><a href="practice-area-2.html">Practice Areas</a>
+        </li>
+        <li (click)="openMenu()" class="menu-item menu-item-home"><a routerLink="av-ali-keser" routerLinkActive="active-menu-item">AV. ALİ KESER KİMDİR</a>
 
-                            </li>
-                            <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-4" data-target="#mm-4"></a><a href="about-team-2.html">Attorney</a>
+        </li>
+        <li (click)="openMenu()" class="menu-item menu-item-home">
+          <a
+          routerLink="uzmanlik-alanlari"
+          routerLinkActive="active-menu-item"
+          >
+            UZMANLIK ALANLARI
+          </a>
 
-                            </li>
-                            <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-5" data-target="#mm-5"></a><a href="portfolio-3-columns.html">Case Study</a>
+        </li>
+        <li (click)="openMenu()" class="menu-item menu-item-home">
+          <a
+          href=""
+          >
+            YAYINLAR
+          </a>
 
-                            </li>
-                            <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-9" data-target="#mm-9"></a><a href="blog-full-right-sidebar-with-frame.html">Blog</a>
-
-                            </li>
-                        </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-1"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#menu-main-navigation" data-target="#menu-main-navigation"></a><a class="mm-title" href="#menu-main-navigation">Home</a></div><ul class="sub-menu mm-listview">
-                                    <li class="menu-item"><a href="index.html" aria-current="page">Homepage 1</a></li>
-
-                                </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-2"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#menu-main-navigation" data-target="#menu-main-navigation"></a><a class="mm-title" href="#menu-main-navigation">Pages</a></div><ul class="sub-menu mm-listview">
-                                    <li class="menu-item"><a href="about-us.html">About Us</a></li>
-                                    <li class="menu-item"><a href="about-us-2.html">About Us 2</a></li>
-                                    <li class="menu-item"><a href="about-team.html">About Team</a></li>
-                                    <li class="menu-item"><a href="about-team-2.html">About Team 2</a></li>
-                                    <li class="menu-item"><a href="contact.html">Contact</a> </li>
-                                    <li class="menu-item"><a href="team-plain-style.html">Team</a></li>
-                                    <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-                                    <li class="menu-item"><a href="price-table.html">Price Table</a></li>
-                                    <li class="menu-item"><a href="maintenance.html">Maintenance</a></li>
-                                    <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
-                                    <li class="menu-item"><a href="404.html">404 Page</a></li>
-                                </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-3"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#menu-main-navigation" data-target="#menu-main-navigation"></a><a class="mm-title" href="#menu-main-navigation">Practice Areas</a></div><ul class="sub-menu mm-listview">
-                                    <li class="menu-item"><a href="practice-area-1.html">Practice Areas 1</a></li>
-                                    <li class="menu-item"><a href="practice-area-2.html">Practice Areas 2</a></li>
-                                    <li class="menu-item"><a href="practice-area-3.html">Practice Areas 3</a></li>
-                                </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-4"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#menu-main-navigation" data-target="#menu-main-navigation"></a><a class="mm-title" href="#menu-main-navigation">Attorney</a></div><ul class="sub-menu mm-listview">
-                                    <li class="menu-item"><a href="about-team-2.html">Attorney</a></li>
-                                    <li class="menu-item"><a href="james-milner.html">Single Attorney</a></li>
-                                </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-5"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#menu-main-navigation" data-target="#menu-main-navigation"></a><a class="mm-title" href="#menu-main-navigation">Case Study</a></div><ul class="sub-menu mm-listview">
-                                    <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-6" data-target="#mm-6"></a><a>Portfolio Grid</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-7" data-target="#mm-7"></a><a>Portfolio Modern</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-8" data-target="#mm-8"></a><a>Portfolio Side Thumbnail</a>
-
-                                    </li>
-                                </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-6"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-5" data-target="#mm-5"></a><a class="mm-title" href="#mm-5">Portfolio Grid</a></div><ul class="sub-menu mm-listview">
-                                            <li class="menu-item"><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
-                                            <li class="menu-item"><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
-                                            <li class="menu-item"><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                            <li class="menu-item"><a href="portfolio-2-columns-with-frame.html">Portfolio 2 Columns With Frame</a></li>
-                                            <li class="menu-item"><a href="portfolio-3-columns-with-frame.html">Portfolio 3 Columns With Frame</a></li>
-                                            <li class="menu-item"><a href="portfolio-4-columns-with-frame.html">Portfolio 4 Columns With Frame</a></li>
-                                            <li class="menu-item"><a href="portfolio-2-columns-no-space.html">Portfolio 2 Columns No Space</a></li>
-                                            <li class="menu-item"><a href="portfolio-3-columns-no-space.html">Portfolio 3 Columns No Space</a></li>
-                                            <li class="menu-item"><a href="portfolio-4-columns-no-space.html">Portfolio 4 Columns No Space</a></li>
-                                        </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-7"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-5" data-target="#mm-5"></a><a class="mm-title" href="#mm-5">Portfolio Modern</a></div><ul class="sub-menu mm-listview">
-                                            <li class="menu-item"><a href="portfolio-modern-2-columns.html">Modern 2 Columns</a></li>
-                                            <li class="menu-item"><a href="portfolio-modern-3-columns.html">Modern 3 Columns</a></li>
-                                            <li class="menu-item"><a href="portfolio-modern-4-columns.html">Modern 4 Columns</a></li>
-                                            <li class="menu-item"><a href="portfolio-modern-2-columns-no-space.html">Modern 2 Columns No Space</a></li>
-                                            <li class="menu-item"><a href="portfolio-modern-3-columns-no-space.html">Modern 3 Columns No Space</a></li>
-                                            <li class="menu-item"><a href="portfolio-modern-4-columns-no-space.html">Modern 4 Columns No Space</a></li>
-                                        </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-8"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-5" data-target="#mm-5"></a><a class="mm-title" href="#mm-5">Portfolio Side Thumbnail</a></div><ul class="sub-menu mm-listview">
-                                            <li class="menu-item"><a href="portfolio-left-right-large-thumbnail.html">Portfolio Left &amp; Right Large Thumbnail</a></li>
-                                            <li class="menu-item"><a href="portfolio-left-large-thumbnail.html">Portfolio Left Large Thumbnail</a></li>
-                                            <li class="menu-item"><a href="portfolio-right-large-thumbnail.html">Portfolio Right Large Thumbnail</a></li>
-                                        </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-9"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#menu-main-navigation" data-target="#menu-main-navigation"></a><a class="mm-title" href="#menu-main-navigation">Blog</a></div><ul class="sub-menu mm-listview">
-                                    <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-10" data-target="#mm-10"></a><a href="blog-full-right-sidebar-with-frame.html">Blog Full</a>
-
-                                    </li>
-
-                                    <li class="menu-item menu-item-has-children"><a class="mm-next" href="#mm-11" data-target="#mm-11"></a><a href="blog-3-columns-with-frame.html">Blog Columns</a>
-
-                                    </li>
-                                    <li class="menu-item"><a href="standard-post-type.html">Single Posts</a></li>
-                                </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-10"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-9" data-target="#mm-9"></a><a class="mm-title" href="#mm-9">Blog Full</a></div><ul class="sub-menu mm-listview">
-                                            <li class="menu-item"><a href="blog-full-right-sidebar-with-frame.html">Blog Full Right Sidebar With Frame</a></li>
-                                            <li class="menu-item"><a href="blog-full-left-sidebar-with-frame.html">Blog Full Left Sidebar With Frame</a></li>
-                                            <li class="menu-item"><a href="blog-full-both-sidebar-with-frame.html">Blog Full Both Sidebar With Frame</a></li>
-                                            <li class="menu-item"><a href="blog-full-right-sidebar.html">Blog Full Right Sidebar</a></li>
-                                            <li class="menu-item"><a href="blog-full-left-sidebar.html">Blog Full Left Sidebar</a></li>
-                                            <li class="menu-item"><a href="blog-full-both-sidebar.html">Blog Full Both Sidebar</a></li>
-                                        </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-11"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-9" data-target="#mm-9"></a><a class="mm-title" href="#mm-9">Blog Columns</a></div><ul class="sub-menu mm-listview">
-                                            <li class="menu-item"><a href="blog-2-columns-with-frame.html">Blog 2 Columns With Frame</a></li>
-                                            <li class="menu-item"><a href="blog-3-columns-with-frame.html">Blog 3 Columns With Frame</a></li>
-                                            <li class="menu-item"><a href="blog-4-columns-with-frame.html">Blog 4 Columns With Frame</a></li>
-                                            <li class="menu-item"><a href="blog-2-columns.html">Blog 2 Columns</a></li>
-                                            <li class="menu-item"><a href="blog-3-columns.html">Blog 3 Columns</a></li>
-                                            <li class="menu-item"><a href="blog-4-columns.html">Blog 4 Columns</a></li>
-                                            <li class="menu-item"><a href="blog-3-columns-with-frame-post-format.html">Blog Columns With Post Format</a></li>
-                                        </ul></div></div></div>
+        </li>
+        <li (click)="openMenu()" class="menu-item menu-item-home">
+          <a href="">
+            İLETİŞİM
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
       <div class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js attorna-body attorna-body-front attorna-full  attorna-with-sticky-navigation  attorna-blockquote-style-1 gdlr-core-link-to-lightbox">
@@ -126,6 +72,7 @@
           class="attorna-sticky-menu-placeholder" style="height: 138px;"></div>
 
 
+        <!-- Big Normal Header -->
         <header class="attorna-header-wrap attorna-header-style-plain  attorna-style-menu-right attorna-sticky-navigation attorna-style-fixed">
             <div class=attorna-header-background></div>
             <div class="attorna-header-container  attorna-container">
@@ -138,102 +85,40 @@
                     <div class="attorna-navigation attorna-item-pdlr clearfix ">
                         <div class=attorna-main-menu id=attorna-main-menu>
                             <ul id=menu-main-navigation-1 class=sf-menu>
-                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children attorna-normal-menu"><a href=index.html class=sf-with-ul-pre>Home</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item" data-size=60><a href=index.html>Homepage 1</a></li>
+                                <li class="menu-item menu-item-home attorna-normal-menu">
+                                  <a
+                                    routerLink="/"
+                                    [routerLinkActiveOptions]="{exact : true}"
+                                    routerLinkActive="active-menu-item-black"
+                                    >
+                                    Ana Sayfa
+                                  </a>
 
-                                    </ul>
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href=# class=sf-with-ul-pre>Pages</a>
-                                    <ul class=sub-menu>
-                                      <li class="menu-item"><a href=about-us.html>About Us</a></li>
-                                      <li class="menu-item"><a href=about-us-2.html>About Us 2</a></li>
-                                      <li class="menu-item"><a href=about-team.html>About Team</a></li>
-                                      <li class="menu-item"><a href=about-team-2.html>About Team 2</a></li>
-                                      <li class="menu-item"><a href=contact.html>Contact</a> </li>
-                                      <li class="menu-item"><a href=team-plain-style.html>Team</a></li>
-                                      <li class="menu-item"><a href=gallery.html>Gallery</a></li>
-                                      <li class="menu-item"><a href=price-table.html>Price Table</a></li>
-                                      <li class="menu-item"><a href=maintenance.html>Maintenance</a></li>
-                                      <li class="menu-item"><a href=coming-soon.html>Coming Soon</a></li>
-                                      <li class="menu-item"><a href=404.html>404 Page</a></li>
-                                    </ul>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                  <a
+                                    routerLink="hakkimizda"
+                                    routerLinkActive="active-menu-item-black"
+                                    >Hakkımızda</a>
+
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href=practice-area-2.html class=sf-with-ul-pre>Practice Areas</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item" data-size=60><a href=practice-area-1.html>Practice Areas 1</a></li>
-                                        <li class="menu-item" data-size=60><a href=practice-area-2.html>Practice Areas 2</a></li>
-                                        <li class="menu-item" data-size=60><a href=practice-area-3.html>Practice Areas 3</a></li>
-                                    </ul>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a
+                                  routerLink="av-ali-keser"
+                                  routerLinkActive="active-menu-item-black"
+                                  >Av. Ali Keser Kimdir?</a>
+
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href=about-team-2.html class=sf-with-ul-pre>Attorney</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item" data-size=60><a href=about-team-2.html>Attorney</a></li>
-                                        <li class="menu-item" data-size=60><a href=james-milner.html>Single Attorney</a></li>
-                                    </ul>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" >Uzmanlık Alanlarımız</a>
+
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href=portfolio-3-columns.html class=sf-with-ul-pre>Case Study</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item menu-item-has-children" data-size=60><a class=sf-with-ul-pre>Portfolio Grid</a>
-                                            <ul class=sub-menu>
-                                                <li class="menu-item"><a href=portfolio-2-columns.html>Portfolio 2 Columns</a></li>
-                                                <li class="menu-item"><a href=portfolio-3-columns.html>Portfolio 3 Columns</a></li>
-                                                <li class="menu-item"><a href=portfolio-4-columns.html>Portfolio 4 Columns</a></li>
-                                                <li class="menu-item"><a href=portfolio-2-columns-with-frame.html>Portfolio 2 Columns With Frame</a></li>
-                                                <li class="menu-item"><a href=portfolio-3-columns-with-frame.html>Portfolio 3 Columns With Frame</a></li>
-                                                <li class="menu-item"><a href=portfolio-4-columns-with-frame.html>Portfolio 4 Columns With Frame</a></li>
-                                                <li class="menu-item"><a href=portfolio-2-columns-no-space.html>Portfolio 2 Columns No Space</a></li>
-                                                <li class="menu-item"><a href=portfolio-3-columns-no-space.html>Portfolio 3 Columns No Space</a></li>
-                                                <li class="menu-item"><a href=portfolio-4-columns-no-space.html>Portfolio 4 Columns No Space</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item menu-item-has-children" data-size=60><a class=sf-with-ul-pre>Portfolio Modern</a>
-                                            <ul class=sub-menu>
-                                                <li class="menu-item"><a href=portfolio-modern-2-columns.html>Modern 2 Columns</a></li>
-                                                <li class="menu-item"><a href=portfolio-modern-3-columns.html>Modern 3 Columns</a></li>
-                                                <li class="menu-item"><a href=portfolio-modern-4-columns.html>Modern 4 Columns</a></li>
-                                                <li class="menu-item"><a href=portfolio-modern-2-columns-no-space.html>Modern 2 Columns No Space</a></li>
-                                                <li class="menu-item"><a href=portfolio-modern-3-columns-no-space.html>Modern 3 Columns No Space</a></li>
-                                                <li class="menu-item"><a href=portfolio-modern-4-columns-no-space.html>Modern 4 Columns No Space</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item menu-item-has-children" data-size=60><a class=sf-with-ul-pre>Portfolio Side Thumbnail</a>
-                                            <ul class=sub-menu>
-                                                <li class="menu-item"><a href=portfolio-left-right-large-thumbnail.html>Portfolio Left &#038; Right Large Thumbnail</a></li>
-                                                <li class="menu-item"><a href=portfolio-left-large-thumbnail.html>Portfolio Left Large Thumbnail</a></li>
-                                                <li class="menu-item"><a href=portfolio-right-large-thumbnail.html>Portfolio Right Large Thumbnail</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" >Yayınlar</a>
+
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href=blog-full-right-sidebar-with-frame.html class=sf-with-ul-pre>Blog</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item menu-item-has-children" data-size=60><a href=blog-full-right-sidebar-with-frame.html class=sf-with-ul-pre>Blog Full</a>
-                                            <ul class=sub-menu>
-                                                <li class="menu-item"><a href=blog-full-right-sidebar-with-frame.html>Blog Full Right Sidebar With Frame</a></li>
-                                                <li class="menu-item"><a href=blog-full-left-sidebar-with-frame.html>Blog Full Left Sidebar With Frame</a></li>
-                                                <li class="menu-item"><a href=blog-full-both-sidebar-with-frame.html>Blog Full Both Sidebar With Frame</a></li>
-                                                <li class="menu-item"><a href=blog-full-right-sidebar.html>Blog Full Right Sidebar</a></li>
-                                                <li class="menu-item"><a href=blog-full-left-sidebar.html>Blog Full Left Sidebar</a></li>
-                                                <li class="menu-item"><a href=blog-full-both-sidebar.html>Blog Full Both Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item menu-item-has-children" data-size=60><a href=blog-3-columns-with-frame.html class=sf-with-ul-pre>Blog Columns</a>
-                                            <ul class=sub-menu>
-                                                <li class="menu-item"><a href=blog-2-columns-with-frame.html>Blog 2 Columns With Frame</a></li>
-                                                <li class="menu-item"><a href=blog-3-columns-with-frame.html>Blog 3 Columns With Frame</a></li>
-                                                <li class="menu-item"><a href=blog-4-columns-with-frame.html>Blog 4 Columns With Frame</a></li>
-                                                <li class="menu-item"><a href=blog-2-columns.html>Blog 2 Columns</a></li>
-                                                <li class="menu-item"><a href=blog-3-columns.html>Blog 3 Columns</a></li>
-                                                <li class="menu-item"><a href=blog-4-columns.html>Blog 4 Columns</a></li>
-                                                <li class="menu-item"><a href=blog-3-columns-with-frame-post-format.html>Blog Columns With Post Format</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item" data-size=60><a href=standard-post-type.html class=sf-with-ul-pre>Single Posts</a></li>
-                                    </ul>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#">İletişim</a>
+
                                 </li>
                             </ul>
-                            <div class=attorna-navigation-slide-bar id=attorna-navigation-slide-bar></div>
+
                         </div>
 
                     </div>
@@ -387,15 +272,15 @@
                       <h3 class="attorna-widget-title">Practice Areas</h3><span class=clear></span>
                       <div class=menu-practice-areas-container>
                           <ul id=menu-practice-areas class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half">
-                              <li class="menu-item"><a href=#>Coporate &#038; Securities</a></li>
-                              <li class="menu-item"><a href=#>Real Estate Law</a></li>
-                              <li class="menu-item"><a href=#>Health Care Law</a></li>
-                              <li class="menu-item"><a href=#>Insurance Law</a></li>
-                              <li class="menu-item"><a href=#>Construction &#038; Engineering</a></li>
-                              <li class="menu-item"><a href=#>Ecommerce Law</a></li>
-                              <li class="menu-item"><a href=#>Private Fund</a></li>
-                              <li class="menu-item"><a href=#>Power &#038; Energy</a></li>
-                              <li class="menu-item"><a href=#>Lending Law</a></li>
+                              <li class="menu-item" ><a style="text-decoration: none;" href=#>Coporate &#038; Securities</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Real Estate Law</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Health Care Law</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Insurance Law</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Construction &#038; Engineering</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Ecommerce Law</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Private Fund</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Power &#038; Energy</a></li>
+                              <li class="menu-item"><a style="text-decoration: none;" href=#>Lending Law</a></li>
                           </ul>
                       </div>
                   </div>
@@ -412,12 +297,12 @@
 
 
 
-  <!-- Normal Header On Scroll -->
-  <header
-    *ngIf="displaySmallNav"
-    [@menuChanged]="'entered'"
-    class="attorna-header-wrap attorna-header-style-plain  attorna-style-menu-right attorna-sticky-navigation attorna-style-fixed attorna-fixed-navigation attorna-animate-fixed-navigation">
-              <div class="attorna-header-background"></div>
+  <!-- Header On Scroll -->
+      <header
+        *ngIf="displaySmallNav"
+        [@menuChanged]="'entered'"
+        class="attorna-header-wrap attorna-header-style-plain  attorna-style-menu-right attorna-sticky-navigation attorna-style-fixed attorna-fixed-navigation attorna-animate-fixed-navigation">
+            <div class="attorna-header-background"></div>
               <div class="attorna-header-container  attorna-container">
                   <div class="attorna-header-container-inner clearfix">
                       <div class="attorna-logo  attorna-item-pdlr">
@@ -428,99 +313,46 @@
                       <div class="attorna-navigation attorna-item-pdlr clearfix ">
                           <div class="attorna-main-menu sf-js-enabled sf-arrows" id="attorna-main-menu" style="touch-action: pan-y;">
                               <ul id="menu-main-navigation-1" class="sf-menu">
-                                  <li class="menu-item menu-item-home current-menu-item menu-item-has-children attorna-normal-menu"><a href="index.html" class="sf-with-ul-pre sf-with-ul">Home</a>
-                                      <ul class="sub-menu" style="display: none;">
-                                          <li class="menu-item" data-size="60"><a href="index.html">Homepage 1</a></li>
+                                  <li class="menu-item menu-item-home menu-item-has-children attorna-normal-menu">
+                                    <a
+                                      routerLink=""
+                                      [routerLinkActiveOptions]="{exact: true}"
+                                      routerLinkActive="active-menu-item-black"
+                                    >
+                                      Ana Sayfa
+                                    </a>
 
-                                      </ul>
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" class="sf-with-ul-pre sf-with-ul">Pages</a>
-                                      <ul class="sub-menu" style="display: none;">
-  	                                    <li class="menu-item"><a href="about-us.html">About Us</a></li>
-  	                                    <li class="menu-item"><a href="about-us-2.html">About Us 2</a></li>
-  	                                    <li class="menu-item"><a href="about-team.html">About Team</a></li>
-  	                                    <li class="menu-item"><a href="about-team-2.html">About Team 2</a></li>
-  	                                    <li class="menu-item"><a href="contact.html">Contact</a> </li>
-  	                                    <li class="menu-item"><a href="team-plain-style.html">Team</a></li>
-  	                                    <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-  	                                    <li class="menu-item"><a href="price-table.html">Price Table</a></li>
-  	                                    <li class="menu-item"><a href="maintenance.html">Maintenance</a></li>
-  	                                    <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
-  	                                    <li class="menu-item"><a href="404.html">404 Page</a></li>
-                                      </ul>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                    <a
+                                      routerLink="hakkimizda"
+                                      routerLinkActive="active-menu-item-black"
+                                    >
+                                      Hakkımızda
+                                    </a>
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="practice-area-2.html" class="sf-with-ul-pre sf-with-ul">Practice Areas</a>
-                                      <ul class="sub-menu" style="display: none;">
-                                          <li class="menu-item" data-size="60"><a href="practice-area-1.html">Practice Areas 1</a></li>
-                                          <li class="menu-item" data-size="60"><a href="practice-area-2.html">Practice Areas 2</a></li>
-                                          <li class="menu-item" data-size="60"><a href="practice-area-3.html">Practice Areas 3</a></li>
-                                      </ul>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                    <a
+                                      routerLink="av-ali-keser"
+                                      routerLinkActive="active-menu-item-black"
+                                    >
+                                      Av. Ali Keser Kimdir?
+                                    </a>
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="about-team-2.html" class="sf-with-ul-pre sf-with-ul">Attorney</a>
-                                      <ul class="sub-menu" style="display: none;">
-                                          <li class="menu-item" data-size="60"><a href="about-team-2.html">Attorney</a></li>
-                                          <li class="menu-item" data-size="60"><a href="james-milner.html">Single Attorney</a></li>
-                                      </ul>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                    <a
+                                      routerLink="uzmanlik-alanlarimiz"
+                                      routerLinkActive="active-menu-item-black"
+                                    >
+                                      Uzmanlık Alanları
+                                    </a>
+
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="portfolio-3-columns.html" class="sf-with-ul-pre sf-with-ul">Case Study</a>
-                                      <ul class="sub-menu" style="display: none;">
-                                          <li class="menu-item menu-item-has-children" data-size="60"><a class="sf-with-ul-pre sf-with-ul">Portfolio Grid</a>
-                                              <ul class="sub-menu sub-menu-right" style="display: none;">
-                                                  <li class="menu-item"><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
-                                                  <li class="menu-item"><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
-                                                  <li class="menu-item"><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                                  <li class="menu-item"><a href="portfolio-2-columns-with-frame.html">Portfolio 2 Columns With Frame</a></li>
-                                                  <li class="menu-item"><a href="portfolio-3-columns-with-frame.html">Portfolio 3 Columns With Frame</a></li>
-                                                  <li class="menu-item"><a href="portfolio-4-columns-with-frame.html">Portfolio 4 Columns With Frame</a></li>
-                                                  <li class="menu-item"><a href="portfolio-2-columns-no-space.html">Portfolio 2 Columns No Space</a></li>
-                                                  <li class="menu-item"><a href="portfolio-3-columns-no-space.html">Portfolio 3 Columns No Space</a></li>
-                                                  <li class="menu-item"><a href="portfolio-4-columns-no-space.html">Portfolio 4 Columns No Space</a></li>
-                                              </ul>
-                                          </li>
-                                          <li class="menu-item menu-item-has-children" data-size="60"><a class="sf-with-ul-pre sf-with-ul">Portfolio Modern</a>
-                                              <ul class="sub-menu sub-menu-right" style="display: none;">
-                                                  <li class="menu-item"><a href="portfolio-modern-2-columns.html">Modern 2 Columns</a></li>
-                                                  <li class="menu-item"><a href="portfolio-modern-3-columns.html">Modern 3 Columns</a></li>
-                                                  <li class="menu-item"><a href="portfolio-modern-4-columns.html">Modern 4 Columns</a></li>
-                                                  <li class="menu-item"><a href="portfolio-modern-2-columns-no-space.html">Modern 2 Columns No Space</a></li>
-                                                  <li class="menu-item"><a href="portfolio-modern-3-columns-no-space.html">Modern 3 Columns No Space</a></li>
-                                                  <li class="menu-item"><a href="portfolio-modern-4-columns-no-space.html">Modern 4 Columns No Space</a></li>
-                                              </ul>
-                                          </li>
-                                          <li class="menu-item menu-item-has-children" data-size="60"><a class="sf-with-ul-pre sf-with-ul">Portfolio Side Thumbnail</a>
-                                              <ul class="sub-menu sub-menu-right" style="display: none;">
-                                                  <li class="menu-item"><a href="portfolio-left-right-large-thumbnail.html">Portfolio Left &amp; Right Large Thumbnail</a></li>
-                                                  <li class="menu-item"><a href="portfolio-left-large-thumbnail.html">Portfolio Left Large Thumbnail</a></li>
-                                                  <li class="menu-item"><a href="portfolio-right-large-thumbnail.html">Portfolio Right Large Thumbnail</a></li>
-                                              </ul>
-                                          </li>
-                                      </ul>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" class="sf-with-ul-pre sf-with-ul">Yayınlar</a>
+
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="blog-full-right-sidebar-with-frame.html" class="sf-with-ul-pre sf-with-ul">Blog</a>
-                                      <ul class="sub-menu sub-menu-right" style="display: none;">
-                                          <li class="menu-item menu-item-has-children" data-size="60"><a href="blog-full-right-sidebar-with-frame.html" class="sf-with-ul-pre sf-with-ul">Blog Full</a>
-                                              <ul class="sub-menu sub-menu-right" style="display: none;">
-                                                  <li class="menu-item"><a href="blog-full-right-sidebar-with-frame.html">Blog Full Right Sidebar With Frame</a></li>
-                                                  <li class="menu-item"><a href="blog-full-left-sidebar-with-frame.html">Blog Full Left Sidebar With Frame</a></li>
-                                                  <li class="menu-item"><a href="blog-full-both-sidebar-with-frame.html">Blog Full Both Sidebar With Frame</a></li>
-                                                  <li class="menu-item"><a href="blog-full-right-sidebar.html">Blog Full Right Sidebar</a></li>
-                                                  <li class="menu-item"><a href="blog-full-left-sidebar.html">Blog Full Left Sidebar</a></li>
-                                                  <li class="menu-item"><a href="blog-full-both-sidebar.html">Blog Full Both Sidebar</a></li>
-                                              </ul>
-                                          </li>
-                                          <li class="menu-item menu-item-has-children" data-size="60"><a href="blog-3-columns-with-frame.html" class="sf-with-ul-pre sf-with-ul">Blog Columns</a>
-                                              <ul class="sub-menu sub-menu-right" style="display: none;">
-                                                  <li class="menu-item"><a href="blog-2-columns-with-frame.html">Blog 2 Columns With Frame</a></li>
-                                                  <li class="menu-item"><a href="blog-3-columns-with-frame.html">Blog 3 Columns With Frame</a></li>
-                                                  <li class="menu-item"><a href="blog-4-columns-with-frame.html">Blog 4 Columns With Frame</a></li>
-                                                  <li class="menu-item"><a href="blog-2-columns.html">Blog 2 Columns</a></li>
-                                                  <li class="menu-item"><a href="blog-3-columns.html">Blog 3 Columns</a></li>
-                                                  <li class="menu-item"><a href="blog-4-columns.html">Blog 4 Columns</a></li>
-                                                  <li class="menu-item"><a href="blog-3-columns-with-frame-post-format.html">Blog Columns With Post Format</a></li>
-                                              </ul>
-                                          </li>
-                                          <li class="menu-item" data-size="60"><a href="standard-post-type.html" class="sf-with-ul-pre">Single Posts</a></li>
-                                      </ul>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" class="sf-with-ul-pre sf-with-ul">İletişim</a>
+
                                   </li>
                               </ul>
                               <div class="attorna-navigation-slide-bar" id="attorna-navigation-slide-bar" style="left: 563.938px; display: block;"></div>
@@ -529,7 +361,7 @@
                       </div>
                   </div>
               </div>
-  </header>
+      </header>
 
   </div>
 
