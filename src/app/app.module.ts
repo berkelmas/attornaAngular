@@ -11,6 +11,11 @@ import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { AboutcounterComponent } from './aboutpage/aboutcounter/aboutcounter.component';
 import { AvsinglepageComponent } from './avsinglepage/avsinglepage.component';
 import { PracticespageComponent } from './practicespage/practicespage.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { MakalelerpageComponent } from './makalelerpage/makalelerpage.component';
+import { ContactpageComponent } from './contactpage/contactpage.component';
+import { SinglemakalepageComponent } from './singlemakalepage/singlemakalepage.component';
+import { SinglepracticepageComponent } from './practicespage/singlepracticepage/singlepracticepage.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { PracticespageComponent } from './practicespage/practicespage.component'
     AboutpageComponent,
     AboutcounterComponent,
     AvsinglepageComponent,
-    PracticespageComponent
+    PracticespageComponent,
+    ErrorpageComponent,
+    MakalelerpageComponent,
+    ContactpageComponent,
+    SinglemakalepageComponent,
+    SinglepracticepageComponent
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@
         </li>
         <li (click)="openMenu()" class="menu-item menu-item-home">
           <a
-          routerLink="uzmanlik-alanlari"
+          routerLink="uzmanlik-alanlarimiz"
           routerLinkActive="active-menu-item"
           >
             UZMANLIK ALANLARI
@@ -32,14 +32,18 @@
         </li>
         <li (click)="openMenu()" class="menu-item menu-item-home">
           <a
-          href=""
+          routerLink="hukuki-yayinlar"
+          routerLinkActive="active-menu-item"
           >
             YAYINLAR
           </a>
 
         </li>
         <li (click)="openMenu()" class="menu-item menu-item-home">
-          <a href="">
+          <a
+            routerLink="iletisim"
+            routerLinkActive="active-menu-item"
+          >
             İLETİŞİM
           </a>
         </li>
@@ -108,13 +112,30 @@
                                   >Av. Ali Keser Kimdir?</a>
 
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" >Uzmanlık Alanlarımız</a>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                  <a
+                                    routerLink="uzmanlik-alanlarimiz"
+                                    routerLinkActive="active-menu-item-black">
+                                    Uzmanlık Alanlarımız
+                                  </a>
 
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" >Yayınlar</a>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                  <a
+                                    routerLink="hukuki-yayinlar"
+                                    routerLinkActive="active-menu-item-black"
+                                  >
+                                    Yayınlar
+                                  </a>
 
                                 </li>
-                                <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#">İletişim</a>
+                                <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                  <a
+                                    routerLink="iletisim"
+                                    routerLinkActive="active-menu-item-black"
+                                  >
+                                    İletişim
+                                  </a>
 
                                 </li>
                             </ul>
@@ -348,10 +369,22 @@
                                     </a>
 
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" class="sf-with-ul-pre sf-with-ul">Yayınlar</a>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                    <a
+                                      routerLink="hukuki-yayinlar"
+                                      routerLinkActive="active-menu-item-black"
+                                    >
+                                      Yayınlar
+                                    </a>
 
                                   </li>
-                                  <li class="menu-item menu-item-has-children attorna-normal-menu"><a href="#" class="sf-with-ul-pre sf-with-ul">İletişim</a>
+                                  <li class="menu-item menu-item-has-children attorna-normal-menu">
+                                    <a
+                                      routerLink="iletisim"
+                                      routerLinkActive="active-menu-item-black"
+                                    >
+                                      İletişim
+                                    </a>
 
                                   </li>
                               </ul>

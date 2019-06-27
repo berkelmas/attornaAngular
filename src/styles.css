@@ -10,3 +10,7 @@
     transform : translateX(-250px);
   }
 }
+
+a:hover {
+  text-decoration: none;
+}
