@@ -228,41 +228,6 @@
   <router-outlet></router-outlet>
 
 
-  <div class="gdlr-core-pbf-wrapper " style="padding: 60px 0px 10px 0px;">
-      <div class=gdlr-core-pbf-background-wrap style="background-color: #1d1d1d ;"></div>
-      <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-          <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-              <div class=gdlr-core-pbf-element>
-                  <div class="gdlr-core-gallery-item gdlr-core-item-pdb clearfix  gdlr-core-gallery-item-style-grid" style="padding-bottom: 10px ;">
-                      <div class="gdlr-core-gallery-item-holder gdlr-core-js-2 clearfix" data-layout=fitrows>
-                          <div class="gdlr-core-item-list gdlr-core-gallery-column  gdlr-core-column-12 gdlr-core-column-first gdlr-core-item-pdlr gdlr-core-item-mgb">
-                              <div class="gdlr-core-gallery-list gdlr-core-media-image"><img src="/assets/upload/banner-1-d.png" alt width=220 height=120 title=banner-1-d></div>
-                          </div>
-                          <div class="gdlr-core-item-list gdlr-core-gallery-column  gdlr-core-column-12 gdlr-core-item-pdlr gdlr-core-item-mgb">
-                              <div class="gdlr-core-gallery-list gdlr-core-media-image"><img src="/assets/upload/banner-2-d.png" alt width=220 height=120 title=banner-2-d></div>
-                          </div>
-                          <div class="gdlr-core-item-list gdlr-core-gallery-column  gdlr-core-column-12 gdlr-core-item-pdlr gdlr-core-item-mgb">
-                              <div class="gdlr-core-gallery-list gdlr-core-media-image"><img src="/assets/upload/banner-3-d.png" alt width=220 height=120 title=banner-3-d></div>
-                          </div>
-                          <div class="gdlr-core-item-list gdlr-core-gallery-column  gdlr-core-column-12 gdlr-core-item-pdlr gdlr-core-item-mgb">
-                              <div class="gdlr-core-gallery-list gdlr-core-media-image"><img src="/assets/upload/banner-4-d.png" alt width=220 height=120 title=banner-4-d></div>
-                          </div>
-                          <div class="gdlr-core-item-list gdlr-core-gallery-column  gdlr-core-column-12 gdlr-core-item-pdlr gdlr-core-item-mgb">
-                              <div class="gdlr-core-gallery-list gdlr-core-media-image"><img src="/assets/upload/banner-5-d.png" alt width=220 height=120 title=banner-5-d></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class=gdlr-core-pbf-element>
-                  <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align" style="margin-bottom: 0px ;">
-                      <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #3a3a3a ;"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-
   <footer>
       <div class="attorna-footer-wrapper ">
           <div class="attorna-footer-container attorna-container clearfix">
@@ -293,15 +258,9 @@
                       <h3 class="attorna-widget-title">Practice Areas</h3><span class=clear></span>
                       <div class=menu-practice-areas-container>
                           <ul id=menu-practice-areas class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half">
-                              <li class="menu-item" ><a style="text-decoration: none;" href=#>Coporate &#038; Securities</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Real Estate Law</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Health Care Law</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Insurance Law</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Construction &#038; Engineering</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Ecommerce Law</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Private Fund</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Power &#038; Energy</a></li>
-                              <li class="menu-item"><a style="text-decoration: none;" href=#>Lending Law</a></li>
+
+                              <li *ngFor="let uzmanlik of uzmanliklar" class="menu-item" ><a style="text-decoration: none;" [routerLink]="['/uzmanlik', uzmanlik.id, uzmanlik.uzmanlik_baslik_nondisplay]" >{{uzmanlik.uzmanlik_baslik}}</a></li>
+
                           </ul>
                       </div>
                   </div>

@@ -6,6 +6,9 @@ import {
   transition
 } from '@angular/animations';
 
+import { MakalelerService } from './makaleler.service';
+import { UzmanliklarService } from './uzmanliklar.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,6 +30,9 @@ export class AppComponent implements OnInit {
   displaySmallNav: boolean = false;
   displaySidebar: boolean = false;
 
+  uzmanliklar: any;
+  makaleler: any;
+
   @HostListener('window:scroll', ['$event']) handleScroll(e) {
     if (window.pageYOffset > 250) {
       this.displaySmallNav = true;
@@ -36,10 +42,16 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.uzmanliklarService.getUzmanliklar()
+      .subscribe(uzmanliklar => {
+         this.uzmanliklar = uzmanliklar;
+      });
 
+    this.makalelerService.getMakale(1)
+      .subscribe(makaleler => this.makaleler = makaleler)
   }
 
-  constructor() {};
+  constructor(private uzmanliklarService: UzmanliklarService, private makalelerService: MakalelerService) {};
 
   openMenu() {
     this.displaySidebar = !this.displaySidebar;

@@ -8,11 +8,7 @@ export class MakalelerService {
   constructor(private http: HttpClient) {}
 
   getMakale(page: number) {
-    if (page) {
-        return this.http.get(`http://localhost:8000/getmakalefilterable/?page=${page}`);
-    } else {
-        return this.http.get(`http://localhost:8000/getmakalefilterable/`);
-    }
+    return this.http.get(`http://localhost:8000/getmakalefilterable/?page=${page}`);
   }
 
   getSingleMakale(id: number) {
