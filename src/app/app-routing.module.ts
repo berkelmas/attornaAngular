@@ -21,10 +21,10 @@ const routes: Routes = [
   {path: 'av-ali-keser', component: AvsinglepageComponent},
 
   {path: 'uzmanlik-alanlarimiz', component: PracticespageComponent},
-  {path: 'singlepracticepage', component: SinglepracticepageComponent},
+  {path: 'uzmanlik/:id/:uzmanlikbaslik', component: SinglepracticepageComponent},
 
   {path: 'hukuki-yayinlar/:page', component: MakalelerpageComponent},
-  {path: 'yayin/:id', component: SinglemakalepageComponent},
+  {path: 'yayin/:id/:slug', component: SinglemakalepageComponent},
 
   {path: 'iletisim', component: ContactpageComponent},
 

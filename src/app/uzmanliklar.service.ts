@@ -8,7 +8,7 @@ export class UzmanliklarService {
   constructor(private http: HttpClient) {}
 
   getUzmanliklar() {
-    return this.http.get(`http://localhost:8000/uzmanliklar`);
+    return this.http.get<[]>(`http://localhost:8000/uzmanliklar`);
   }
 
   getSingleUzmanlik(id: number) {

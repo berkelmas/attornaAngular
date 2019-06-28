@@ -9,14 +9,14 @@ export class MakalelerService {
 
   getMakale(page: number) {
     if (page) {
-        return this.http.get(`https://api.isavukatim.com/makalesixitem/?page=${page}`);
+        return this.http.get(`http://localhost:8000/getmakalefilterable/?page=${page}`);
     } else {
-        return this.http.get(`https://api.isavukatim.com/makalesixitem/`);
+        return this.http.get(`http://localhost:8000/getmakalefilterable/`);
     }
   }
 
   getSingleMakale(id: number) {
-    return this.http.get(`https://api.isavukatim.com/makale/${id}`)
+    return this.http.get(`http://localhost:8000/makale/${id}`)
   }
-  
+
 }

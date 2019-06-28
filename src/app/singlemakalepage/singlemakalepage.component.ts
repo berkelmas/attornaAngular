@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
-import {MakalelerService} from '../makaleler.service';
+import { MakalelerService } from '../makaleler.service';
+import { UzmanliklarService } from '../uzmanliklar.service';
 
 @Component({
   selector: 'app-singlemakalepage',
@@ -11,8 +12,9 @@ import {MakalelerService} from '../makaleler.service';
 export class SinglemakalepageComponent implements OnInit {
   singleMakale: any = [];
   makaleler: any = [];
+  uzmanliklar: any;
 
-  constructor(private router: ActivatedRoute, private makaleService: MakalelerService) {}
+  constructor(private router: ActivatedRoute, private makaleService: MakalelerService, private uzmanliklarService: UzmanliklarService) {}
 
   ngOnInit() {
     this.router.params.subscribe(res => {
@@ -20,15 +22,18 @@ export class SinglemakalepageComponent implements OnInit {
         .subscribe(article => {
           this.singleMakale = [];
           this.singleMakale.push(article);
-          console.log(this.singleMakale);
         });
     });
 
     this.makaleService.getMakale(1)
       .subscribe(makaleler => {
-        console.log(makaleler);
-        this.makaleler = makaleler; 
-      });
+        this.makaleler = makaleler;
+      }
+    );
+
+    this.uzmanliklarService.getUzmanliklar()
+      .subscribe(uzmanliklar => this.uzmanliklar = uzmanliklar)
+
   }
 
 }
