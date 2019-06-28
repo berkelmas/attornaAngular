@@ -39,7 +39,7 @@ import {convertHtmlToText} from './convertHtmlToText.pipe';
     convertHtmlToText
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'alfahukukApp'}),
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule
