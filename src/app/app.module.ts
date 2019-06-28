@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { SinglemakalepageComponent } from './singlemakalepage/singlemakalepage.c
 import { SinglepracticepageComponent } from './practicespage/singlepracticepage/singlepracticepage.component';
 
 import {convertHtmlToText} from './convertHtmlToText.pipe';
+import { MainpageformComponent } from './lawwithnumbers/mainpageform/mainpageform.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +38,16 @@ import {convertHtmlToText} from './convertHtmlToText.pipe';
     SinglemakalepageComponent,
     SinglepracticepageComponent,
 
-    convertHtmlToText
+    convertHtmlToText,
+
+    MainpageformComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'alfahukukApp'}),
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [],
