@@ -8,7 +8,9 @@
 
 
                     <!-- Makale İçeriğinin Geleceği Yer Burası -->
-                      <h1>Makale İçeriği</h1>
+                      <div *ngFor="let article of singleMakale">
+                        <div [innerHTML]="article.makale_mesaj"></div>
+                      </div>
 
 
                     </div>
@@ -18,16 +20,16 @@
                     </div>
 
                     <div class="attorna-single-nav-area clearfix">
-                        <span class="attorna-single-nav attorna-single-nav-left">
-                            <span class="attorna-text attorna-title-font" >Previous Post</span>
-                            <a href="#">
-                                <span class="attorna-single-nav-title attorna-title-font">Video Post Format</span>
+                        <span *ngIf="makaleler.results" class="attorna-single-nav attorna-single-nav-left">
+                            <span class="attorna-text attorna-title-font" >Öncekİ </span>
+                            <a [routerLink]="['/yayin', makaleler.results[0].id]">
+                                <span class="attorna-single-nav-title attorna-title-font">{{makaleler.results[0].makale_baslik | slice:0:30}}...</span>
                             </a>
                         </span>
-                        <span class="attorna-single-nav attorna-single-nav-right">
-                            <span class="attorna-text attorna-title-font" >Next Post</span>
-                            <a href="#">
-                                <span class="attorna-single-nav-title attorna-title-font" >Audio Post Format</span>
+                        <span *ngIf="makaleler.results" class="attorna-single-nav attorna-single-nav-right">
+                            <span class="attorna-text attorna-title-font" >Sonrakİ </span>
+                            <a [routerLink]="['/yayin', makaleler.results[1].id]">
+                                <span class="attorna-single-nav-title attorna-title-font" >{{makaleler.results[1].makale_baslik | slice:0:30}}...</span>
                             </a>
                         </span>
                     </div>
@@ -95,30 +97,26 @@
                     <div id=gdlr-core-recent-post-widget-2 class="widget widget_gdlr-core-recent-post-widget attorna-widget">
                         <h3 class="attorna-widget-title">Son Makaleler</h3><span class=clear></span>
                         <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
-                            <div class="gdlr-core-recent-post-widget clearfix">
+
+
+                            <div *ngFor="let recentArticle of makaleler.results; let i = index" class="gdlr-core-recent-post-widget clearfix">
+
+                              <div *ngIf="i < 3">
                                 <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
                                 <div class=gdlr-core-recent-post-widget-content>
-                                    <div class=gdlr-core-recent-post-widget-title><a href=#>Domestic Violence in California &#8211; How a Lawyer Can Help</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
+                                    <div class=gdlr-core-recent-post-widget-title><a [routerLink]="['/yayin', recentArticle.id]">{{recentArticle.makale_baslik}}</a></div>
+                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i>
+                                    </span>
+                                      <a routerLink="/hakkimizda">Av. Ali Keser</a>
+                                    </span>
                                     </div>
                                 </div>
+                              </div>
+
                             </div>
-                            <div class="gdlr-core-recent-post-widget clearfix">
-                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
-                                <div class=gdlr-core-recent-post-widget-content>
-                                    <div class=gdlr-core-recent-post-widget-title><a href=#>Filing a Claim against a Cruise Ship Contractual Limitations</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-recent-post-widget clearfix">
-                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
-                                <div class=gdlr-core-recent-post-widget-content>
-                                    <div class=gdlr-core-recent-post-widget-title><a href=#>Day Care Responsibility to Protect Children</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
                         </div>
                     </div>
 

@@ -23,8 +23,8 @@ const routes: Routes = [
   {path: 'uzmanlik-alanlarimiz', component: PracticespageComponent},
   {path: 'singlepracticepage', component: SinglepracticepageComponent},
 
-  {path: 'hukuki-yayinlar', component: MakalelerpageComponent},
-  {path: 'singlemakalepage', component: SinglemakalepageComponent},
+  {path: 'hukuki-yayinlar/:page', component: MakalelerpageComponent},
+  {path: 'yayin/:id', component: SinglemakalepageComponent},
 
   {path: 'iletisim', component: ContactpageComponent},
 

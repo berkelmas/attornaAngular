@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UzmanliklarService} from '../uzmanliklar.service';
 
 @Component({
   selector: 'app-practicespage',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./practicespage.component.css', '../aboutpage/aboutpage.component.scss']
 })
 export class PracticespageComponent implements OnInit {
+  uzmanliklar: any;
 
-  constructor() { }
+  constructor(private uzmanlikService: UzmanliklarService) { }
 
   ngOnInit() {
   }
