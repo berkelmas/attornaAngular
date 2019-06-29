@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 import { UzmanliklarService } from '../../uzmanliklar.service';
+import { MakalelerService } from '../../makaleler.service';
 
 @Component({
   selector: 'app-singlepracticepage',
@@ -12,7 +13,9 @@ export class SinglepracticepageComponent implements OnInit {
   uzmanlik: any;
   uzmanliklar: any;
 
-  constructor(private uzmanliklarService: UzmanliklarService, private router: ActivatedRoute) { }
+  makaleler: [];
+
+  constructor(private uzmanliklarService: UzmanliklarService, private router: ActivatedRoute, private makalelerService: MakalelerService) { }
 
   ngOnInit() {
     this.router.params.subscribe(res => {
@@ -21,6 +24,10 @@ export class SinglepracticepageComponent implements OnInit {
 
       this.uzmanliklarService.getUzmanliklar()
         .subscribe(uzmanliklar => this.uzmanliklar = uzmanliklar)
+
+
+      this.makalelerService.getMakale(1)
+        .subscribe(res => this.makaleler = res['results']);
 
     })
   }

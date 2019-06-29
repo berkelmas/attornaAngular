@@ -37,6 +37,9 @@ export class MainpageformComponent implements OnInit {
 
   handleSubmit(f: NgForm) {
     const result = f.value;
+    if (result.name === '' || result.ulasim === '' || result.message === '') {
+      return;
+    }
     this.contactService.sendContactData(result.name, result.ulasim, result.message)
       .subscribe(
         res => {

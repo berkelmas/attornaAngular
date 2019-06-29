@@ -99,10 +99,10 @@
                             <div *ngFor="let recentArticle of makaleler.results; let i = index" class="gdlr-core-recent-post-widget clearfix">
 
                               <div *ngIf="i < 3">
-                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
+                                <a [routerLink]="['/yayin', recentArticle.id, recentArticle.makale_slug]"><div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div></a>
                                 <div class=gdlr-core-recent-post-widget-content>
                                     <div class=gdlr-core-recent-post-widget-title><a [routerLink]="['/yayin', recentArticle.id, recentArticle.makale_slug]">{{recentArticle.makale_baslik}}</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i>
+                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span>{{recentArticle.makale_yayintarihi}}</span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i>
                                     </span>
                                       <a routerLink="/av-ali-keser">Av. Ali Keser</a>
                                     </span>

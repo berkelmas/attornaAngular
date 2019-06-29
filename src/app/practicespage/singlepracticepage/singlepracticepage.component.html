@@ -48,30 +48,19 @@
                     <div id=gdlr-core-recent-post-widget-2 class="widget widget_gdlr-core-recent-post-widget attorna-widget">
                         <h3 class="attorna-widget-title">Son Makaleler</h3><span class=clear></span>
                         <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
-                            <div class="gdlr-core-recent-post-widget clearfix">
-                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
+
+                            <div *ngFor="let makale of makaleler; let i = index" class="gdlr-core-recent-post-widget clearfix">
+                              <div *ngIf="i < 3">
+                                <a [routerLink]="['/yayin', makale.id, makale.makale_slug]"><div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div></a>
                                 <div class=gdlr-core-recent-post-widget-content>
-                                    <div class=gdlr-core-recent-post-widget-title><a href=#>Domestic Violence in California &#8211; How a Lawyer Can Help</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
+                                    <div class=gdlr-core-recent-post-widget-title><a [routerLink]="['/yayin', makale.id, makale.makale_slug]">{{makale.makale_baslik}}</a></div>
+                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span>
+                                      <a routerLink="/av-ali-keser" >Av. Ali Keser</a></span>
                                     </div>
                                 </div>
+                              </div>
                             </div>
-                            <div class="gdlr-core-recent-post-widget clearfix">
-                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
-                                <div class=gdlr-core-recent-post-widget-content>
-                                    <div class=gdlr-core-recent-post-widget-title><a href=#>Filing a Claim against a Cruise Ship Contractual Limitations</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gdlr-core-recent-post-widget clearfix">
-                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src="/assets/upload/icon22.png" alt></div>
-                                <div class=gdlr-core-recent-post-widget-content>
-                                    <div class=gdlr-core-recent-post-widget-title><a href=#>Day Care Responsibility to Protect Children</a></div>
-                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
 

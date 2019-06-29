@@ -25,8 +25,5 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
   }
 
-  nextSlide() {
-    this.currentSlide = Math.min(this.currentSlide + 1, 3);
-  }
 
 }

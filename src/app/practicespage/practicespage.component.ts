@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {UzmanliklarService} from '../uzmanliklar.service';
 
 @Component({
@@ -56,9 +57,8 @@ export class PracticespageComponent implements OnInit {
             default:
               break;
           }
-
         })
-      })
+      });
   }
 
 }
