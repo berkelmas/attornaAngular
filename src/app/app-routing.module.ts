@@ -18,7 +18,7 @@ import {ErrorpageComponent} from './errorpage/errorpage.component';
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: MainpageComponent},
   {path: 'hakkimizda', component: AboutpageComponent},
-  {path: 'av-ali-keser', component: AvsinglepageComponent},
+  {path: 'av-ali-tarak', component: AvsinglepageComponent},
 
   {path: 'uzmanlik-alanlarimiz', component: PracticespageComponent},
   {path: 'uzmanlik/:id/:uzmanlikbaslik', component: SinglepracticepageComponent},
