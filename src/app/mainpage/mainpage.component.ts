@@ -5,7 +5,7 @@ import { MakalelerService } from '../makaleler.service';
 @Component({
   selector: 'app-mainpage',
   templateUrl: './mainpage.component.html',
-  styleUrls: ['./mainpage.component.css']
+  styleUrls: ['./mainpage.component.scss']
 })
 export class MainpageComponent implements OnInit {
 

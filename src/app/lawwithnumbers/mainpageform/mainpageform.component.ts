@@ -13,7 +13,7 @@ import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-mainpageform',
   templateUrl: './mainpageform.component.html',
-  styleUrls: ['./mainpageform.component.css'],
+  styleUrls: ['./mainpageform.component.scss'],
   animations: [
     trigger('formAnimation', [
       transition('void => enteredMessage', [style({opacity : 0, height: 0}), animate('500ms')]),
