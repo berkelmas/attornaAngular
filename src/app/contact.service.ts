@@ -9,7 +9,7 @@ export class ContactService {
   constructor(private http: HttpClient) {}
 
   sendContactData(name: string, ulasim: string, message: string) {
-    return this.http.post('http://localhost:8000/addcontact/', {contact_isim: name, contact_ulasim: ulasim, contact_message: message})
+    return this.http.post('https://api.alitarak.com/addcontact/', {contact_isim: name, contact_ulasim: ulasim, contact_message: message})
   }
 
 }
