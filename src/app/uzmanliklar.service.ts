@@ -8,11 +8,11 @@ export class UzmanliklarService {
   constructor(private http: HttpClient) {}
 
   getUzmanliklar() {
-    return this.http.get<[]>(`http://localhost:8000/uzmanliklar/`);
+    return this.http.get<[]>(`https://api.alitarak.com/uzmanliklar/`);
   }
 
   getSingleUzmanlik(id: number) {
-    return this.http.get(`http://localhost:8000/uzmanlik/${id}`)
+    return this.http.get(`https://api.alitarak.com/uzmanlik/${id}`)
   }
 
 }

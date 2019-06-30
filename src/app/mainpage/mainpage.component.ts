@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
+
 import { UzmanliklarService } from '../uzmanliklar.service';
 import { MakalelerService } from '../makaleler.service';
 
@@ -18,9 +20,11 @@ export class MainpageComponent implements OnInit {
 
   articles: any;
 
-  constructor(private uzmanliklarService: UzmanliklarService, private makalelerService: MakalelerService) { }
+  constructor(private uzmanliklarService: UzmanliklarService, private makalelerService: MakalelerService, private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
+
+    this.titleService.setTitle('Alfa Hukuk | Av. Ali Tarak');
 
     this.uzmanliklarService.getUzmanliklar()
       .subscribe(res => {

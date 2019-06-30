@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {UzmanliklarService} from '../uzmanliklar.service';
 
@@ -20,9 +21,13 @@ export class PracticespageComponent implements OnInit {
   tazminathukuku: any;
   ticarethukuku: any;
 
-  constructor(private uzmanliklarService: UzmanliklarService) { }
+  constructor(private uzmanliklarService: UzmanliklarService, private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
+
+    this.titleService.setTitle('Alfa Hukuk & Danışmanlık | Hukuki Uzmanlıklar');
+    this.metaService.updateTag({name: 'description', content: 'Alfa Hukuk & Danışmanlık Uzmanlık Alanlarının Gösterildiği Sayfadır.'});
+
     this.uzmanliklarService.getUzmanliklar()
       .subscribe(res => {
         res.map(uzmanlik => {

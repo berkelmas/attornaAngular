@@ -7,6 +7,8 @@ import {
   transition
 } from '@angular/animations';
 
+import { Title, Meta } from '@angular/platform-browser';
+
 import { ContactService } from '../contact.service';
 
 @Component({
@@ -25,9 +27,14 @@ export class ContactpageComponent implements OnInit {
   submittedTrue: boolean;
   submittedError: boolean;
 
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService, private titleService: Title, private metaService: Meta) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    this.titleService.setTitle('Alfa Hukuk & Danışmanlık | İletişim');
+    this.metaService.updateTag({name: 'description', content: 'Alfa Hukuk & Danışmanlık bürosuna bu sayfadan ulaşabilir ve iletişime geçebilirsiniz.'});
+
+  }
 
   handleSubmit(f: NgForm) {
     const result = f.value;

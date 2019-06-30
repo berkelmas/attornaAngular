@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -50,7 +50,7 @@ import { MainpageformComponent } from './lawwithnumbers/mainpageform/mainpagefor
     FormsModule
 
   ],
-  providers: [],
+  providers: [Title, Meta],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

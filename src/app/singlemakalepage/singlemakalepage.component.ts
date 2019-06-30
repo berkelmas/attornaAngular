@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 
 import { MakalelerService } from '../makaleler.service';
 import { UzmanliklarService } from '../uzmanliklar.service';
@@ -14,7 +15,7 @@ export class SinglemakalepageComponent implements OnInit {
   makaleler: any = [];
   uzmanliklar: any;
 
-  constructor(private router: ActivatedRoute, private makaleService: MakalelerService, private uzmanliklarService: UzmanliklarService) {}
+  constructor(private router: ActivatedRoute, private makaleService: MakalelerService, private uzmanliklarService: UzmanliklarService, private titleService: Title, private metaService: Meta) {}
 
   ngOnInit() {
     this.router.params.subscribe(res => {
@@ -22,6 +23,8 @@ export class SinglemakalepageComponent implements OnInit {
         .subscribe(article => {
           this.singleMakale = [];
           this.singleMakale.push(article);
+          this.titleService.setTitle('Alfa Hukuk | ' + article['makale_baslik']);
+          this.metaService.updateTag({name: 'description', content: article['make_meta_description']});
         });
     });
 

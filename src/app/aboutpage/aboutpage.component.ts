@@ -6,6 +6,8 @@ import {
   transition
 } from '@angular/animations';
 
+import { Title, Meta } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-aboutpage',
   templateUrl: './aboutpage.component.html',
@@ -30,9 +32,11 @@ export class AboutpageComponent implements OnInit {
   @ViewChild('fourthAnswer', {static: false}) fourthAnswer: ElementRef;
   @ViewChild('fifthAnswer', {static: false}) fifthAnswer: ElementRef;
 
-  constructor() { }
+  constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Alfa Hukuk & Danışmanlık | Hakkımızda');
+    this.metaService.updateTag({name: 'description', content: 'Alfa Hukuk & Danışmanlık bürosunun vizyon, misyon ve genel bilgilerini içeren hakkımızda sayfasıdır.'})
   }
 
   openQuestion(question: number) {
